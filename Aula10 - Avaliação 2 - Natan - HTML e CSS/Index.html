@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cinema</title>
+    <link rel="icon" type="image/x-icon" href="img/icone.png">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body id="bodyindex">
+     
+    <div id="fundologin">
+        <div id="divbtn">
+            <button id="btnindex1" onclick="logar()">Login</button>
+            <button id="btnindex2" onclick="cadastrar()">Cadastro</button>
+        </div>
+
+        <div id="divImgTexto">
+            <img src="img/Claquete 1.jpg" id="claquete">
+
+            <div id="textoindex">
+                Realize seu cadastro para ter acesso ao Sistema.
+            </div>
+
+        </div>
+
+        <div id="divImgTexto2">
+            <img src="img/Pipoca 1.jpg" id="claquete">
+
+            <div id="textoindex">
+                Bem vindo(a)!!
+            </div>
+
+        </div>
+
+        <div id="divform1">
+            <form id="cadastro">
+                <label id="labelindex"> Nome </label>
+                <input type="text" id="inputindex"><br><br>
+                <label id="labelindex"> Telefone </label>
+                <input type="tel" pattern="[0-9]{2} - [0-9]{5} - [0-9]{4}" id="inputindex"><br><br>
+                <label id="labelindex"> E-mail </label>
+                <input type="email" id="inputindex"><br><br>
+                <label id="labelindex"> CPF </label>
+                <input type="tel" pattern="[0-9]{3}.[0-9]{3}.[0-9]{3}-[0-9]{2}" id="inputindex"><br><br>
+
+                <input type="submit" value="CADASTRAR" id="btnsubmit" onclick="confirm('Confirmar cadastro?')">
+            </form>
+        </div>
+
+            <div id="divform2">
+                <form id="login" action="Filmes.html">
+                    <label id="labelindex"> Login </label>
+                    <input type="text" id="inputindex"><br><br>
+                    <label id="labelindex"> Senha </label>
+                    <input type="password" id="inputindex"><br><br>
+                    
+    
+                    <input type="submit" value="OK" id="btnsubmit">
+                </form>
+
+        </div>
+
+
+    </div>
+    
+
+</body>
+<script>
+     function cadastrar() {
+        document.getElementById("divform1").style.display = 'block';
+        document.getElementById("divform2").style.display = 'none';
+        document.getElementById("divImgTexto").style.display = 'block';
+        document.getElementById("divImgTexto2").style.display = 'none';
+    }
+
+    function logar() {
+        document.getElementById("divform1").style.display = 'none';
+        document.getElementById("divform2").style.display = 'block';
+        document.getElementById("divImgTexto2").style.display = 'block';
+        document.getElementById("divImgTexto").style.display = 'none';
+    }
+
+</script>
+
+</html>
